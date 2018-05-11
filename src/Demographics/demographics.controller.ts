@@ -9,7 +9,7 @@ export class DemographicsController{
 
     @Get()
     public async getDemographics(){
-        return 'getok';
+        return await this.demographicsService.getDemographics();
     }
 
     @Post()

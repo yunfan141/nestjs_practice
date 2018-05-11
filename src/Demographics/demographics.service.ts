@@ -11,4 +11,9 @@ export class DemographicsService {
     public async addDemographics(Demographic: any): Promise<DemographicsEntity>{
         return await this.demographicsRepository.save(Demographic);
     }
+
+    public async getDemographics(): Promise<Array<DemographicsEntity>>{
+        return await this.demographicsRepository.find();
+    }
+
 }
